@@ -57,7 +57,7 @@ retry $MAX_WAIT host_check_mds_up || exit 1
 sleep 5
 
 echo "Creating role bindings for principals"
-docker-compose exec tools bash -c "/tmp/helper/create-role-bindings.sh" || exit 1
+docker-compose exec -T tools bash -c "/tmp/helper/create-role-bindings.sh" || exit 1
 
 # Workaround for setting min ISR on topic _confluent-metadata-auth
 docker-compose exec kafka1 kafka-configs \
