@@ -1,0 +1,12 @@
+name: Run cp-demo
+
+on: push
+
+jobs:
+  run:
+    name: Run cp-demo
+    runs-on: ubuntu-latest
+    steps:
+    - name: start
+      run: ./scripts/start.sh
+
